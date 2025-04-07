@@ -7,7 +7,7 @@ function NewsCard({ info }) {
 
     return (
 
-        <div className='w-80 bg-black rounded-lg shadow-md overflow-hidden text-white p-2 m-2 border border-transparent hover:border-white transition duration-300'>
+        <div className='w-80 bg-black rounded-lg shadow-md overflow-hidden text-white p-2 m-2 border border-transparent hover:border-white transition duration-300\'>
             <img
                 className='w-80 h-48 object-cover rounded-lg'
                 src={urlToImage}
