@@ -10,12 +10,15 @@ function NewsContainer() {
 
 
   return (
-    <div className="bg-neutral-900 rounded p-2 m-2 h-full flex flex-wrap justify-evenly w-5/6">
-      {
-        newsData.map((info, index) =>
-          <NewsCard key={index} info={info} />
-        )
-      }
+    <div className='w-5/6 bg-neutral-900 rounded p-2 m-2 '>
+      <h1 className='text-3xl font-bold text-white p-5'>Top Trending</h1>
+      <div className=" flex flex-wrap">
+        {
+          newsData.map((info, index) =>
+            <NewsCard key={index} info={info} />
+          )
+        }
+      </div>
     </div>
   )
 }

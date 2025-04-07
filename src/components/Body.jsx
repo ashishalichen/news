@@ -4,9 +4,9 @@ import MainContainer from './MainContainer'
 
 function Body() {
   return (
-    <div className='bg-black w-full'>
-        <Header/>
-        <MainContainer/>
+    <div className='bg-black'>
+      <Header />
+      <MainContainer />
     </div>
   )
 }
