@@ -1,7 +1,9 @@
 import React from 'react';
+import { format } from 'date-fns';
 
 function NewsCard({ info }) {
-    const { urlToImage, title, source } = info;
+    const { urlToImage, title, source, publishedAt } = info;
+    const date = format(new Date(publishedAt), "MMMM d, yyyy h:mm a")
 
     if (!urlToImage) return null;
 
@@ -16,6 +18,9 @@ function NewsCard({ info }) {
             <div className='p-3'>
                 <h1 className='text-sm'>{source?.name}</h1>
                 <p className='text-base font-semibold mt-1'>{title}</p>
+            </div >
+            <div className='justify-items-end align-bottom'>
+                <p>{date}</p>
             </div>
         </div>
 

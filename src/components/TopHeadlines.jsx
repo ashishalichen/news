@@ -1,9 +1,9 @@
 import React, { use, useEffect } from 'react'
 import { API_KEY } from '../utils/constants'
-import useTopHeadline from './hooks/useTopHeadlines'
+import useTopHeadline from '../hooks/useTopHeadlines'
 import NewsCard from './NewsCard'
 
-function NewsContainer() {
+function TopHeadlines() {
 
   const newsData = useTopHeadline()
 
@@ -23,4 +23,4 @@ function NewsContainer() {
   )
 }
 
-export default NewsContainer
+export default TopHeadlines

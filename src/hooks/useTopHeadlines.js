@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_KEY } from "../../utils/constants";
+import { API_KEY } from "../utils/constants";
 
 function useTopHeadline() {
     const [apiData, setApiData] = useState([])
