@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
     return (
-        <div className='flex flex-row justify-between px-10 h-16 top-0'>
+        <div className='flex flex-row justify-between px-10 h-16 top-0 bg-black'>
             <h1 className='text-5xl font-bold  text-red-500 font-stretch-200% p-2 w-1/4'>SWEN</h1>
 
             <div className='flex flex-row items-center w-3/4 mx-30 justify-center'>

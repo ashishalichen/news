@@ -1,14 +1,64 @@
-import { useState } from 'react'
+import { Provider } from 'react-redux'
 import './App.css'
 import Body from './components/Body'
+import store from './utils/store'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import TopHeadlines from './components/TopHeadlines'
+import Business from './components/Business'
+import Entertainment from './components/Entertainment'
+import Health from './components/Health'
+import Science from './components/Science'
+import Sports from './components/Sports'
+import Technology from './components/Technology'
+import Header from './components/Header'
+
+
+const appRouter = createBrowserRouter([{
+  path: '/',
+  element: <Body />,
+  children: [
+    {
+      path: '/',
+      element: <TopHeadlines />
+    },
+    {
+      path: '/business',
+      element: <Business />
+    },
+    {
+      path: '/entertainment',
+      element: <Entertainment />
+    },
+    {
+      path: '/health',
+      element: <Health />
+    },
+    {
+      path: '/science',
+      element: <Science />
+    },
+    {
+      path: '/sports',
+      element: <Sports />
+    },
+    {
+      path: '/technology',
+      element: <Technology />
+    }
+  ]
+
+
+
+}])
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Body/>
-    </>
+    <Provider store={store}>
+      <Header />
+      <RouterProvider router={appRouter} />
+    </Provider>
   )
 }
 
