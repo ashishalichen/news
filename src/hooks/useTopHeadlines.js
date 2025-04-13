@@ -21,7 +21,7 @@ function useTopHeadline() {
     async function fetchData() {
         const data = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + API_KEY)
         const json = await data.json()
-        console.log(json)
+        // console.log(json)
         setApiData(json.articles)
 
         dispatch(setCache({ ['Headlines']: json.articles }))

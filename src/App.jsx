@@ -11,11 +11,18 @@ import Science from './components/Science'
 import Sports from './components/Sports'
 import Technology from './components/Technology'
 import Header from './components/Header'
+import SearchResult from './components/SearchResult'
 
 
 const appRouter = createBrowserRouter([{
   path: '/',
-  element: <Body />,
+  element: (
+    <>
+      <Header />
+      <Body />
+    </>
+
+  ),
   children: [
     {
       path: '/',
@@ -44,6 +51,10 @@ const appRouter = createBrowserRouter([{
     {
       path: '/technology',
       element: <Technology />
+    },
+    {
+      path: '/search',
+      element: <SearchResult />
     }
   ]
 
@@ -56,7 +67,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Header />
+
       <RouterProvider router={appRouter} />
     </Provider>
   )
